@@ -147,7 +147,7 @@ export const getBlogs = async (req, res, next) => {
             data: blogs,
             total_data: total,
             current_page: parseInt(page),
-            total_pages: Math.ceil(total / perPage)
+            per_page: parseInt(perPage)
         })
     } catch (error){
         res.status(500).json({ message: error.message})
